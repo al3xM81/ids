@@ -1,1 +1,6 @@
-<p>image-gallery works!</p>
+<mat-card class="gallery-item">
+    <mat-card-header>
+        <mat-card-title>{{ imageTitle }}</mat-card-title>
+    </mat-card-header>
+    <img mat-card-image [src]="this.imageUrl" [alt]="this.imageTitle" class="gallery-img">
+</mat-card>

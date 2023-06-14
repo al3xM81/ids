@@ -1,4 +1,60 @@
 /* You can add global styles to this file, and also import other style files */
 
 html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; font-size: 12px; }
+
+.parent {
+    background-color: aliceblue;
+    max-width: 800px;
+    margin: auto;
+    top: 10px;   
+}
+
+.search-section {
+    display: inline;
+    padding: 15px;
+    vertical-align: middle;
+}
+
+.search-section > * {
+    margin: 3px;
+}
+
+.gallery-item {
+    width: 250px;
+    margin: 5px;
+}
+
+.gallery-img {
+    background-color: #fafafa;
+    height: inherit;
+}
+
+.card-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 16px;
+}
+
+.card-container > * {
+    display: flex;
+}
+
+.mat-mdc-text-field-wrapper {
+    font-size: 12px;
+    height: 36px !important;
+    width: 500px !important;
+}
+
+.mdc-text-field {
+    align-items: center !important;
+}
+
+.mdc-button  {
+    font-size: 12px !important;
+}
+
+.mat-mdc-floating-label {
+    font-size: 12px !important;
+}

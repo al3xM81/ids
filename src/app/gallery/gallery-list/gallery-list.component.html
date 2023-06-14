@@ -1,0 +1,14 @@
+
+<div class="parent">
+    <div class="search-section">
+        <mat-form-field>
+            <mat-icon matPrefix class="input-icon">search</mat-icon>
+            <input matInput type="search" placeholder="Search for picture name">
+        </mat-form-field>
+        <button mat-raised-button color="primary" (click)="addImage()">Add Image</button>
+    </div>
+    <div class="card-container">
+        <image-gallery [url]="'https://vignette.wikia.nocookie.net/starwars/images/2/20/LukeTLJ.jpg'" [title]="'Luke Skywalker'"></image-gallery>
+        <image-gallery *ngFor="let x of total" [url]="'https://vignette.wikia.nocookie.net/starwars/images/e/eb/ArtooTFA2-Fathead.png'" [title]="'R2-D2'"></image-gallery>
+    </div>
+</div>
