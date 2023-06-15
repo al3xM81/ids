@@ -1,6 +1,9 @@
 import { Component } from '@angular/core';
+import { MatDialog } from '@angular/material/dialog';
 
 import { SwDataService } from 'src/app/services/sw-data.service';
+
+import { ModalImageComponent } from 'src/app/modals/modal-image/modal-image.component';
 
 @Component({
   selector: 'app-gallery-list',
@@ -18,7 +21,7 @@ export class GalleryListComponent {
   pageIndex = 0;
   pageSize = 10;
 
-  constructor(private swData: SwDataService) {
+  constructor(private swData: SwDataService, public dialog: MatDialog) {
     this.requestImages();
   }
 
@@ -32,8 +35,17 @@ export class GalleryListComponent {
       })
   }
 
-  addImage()  {
+  showImage(event: any) {
+    console.log(event);
+    this.dialog.open(ModalImageComponent, {
+      data: event
+    });
+  }
 
+  addImage()  {
+    this.dialog.open(ModalImageComponent, {
+
+    });
   }
 
   // For filtering purposes

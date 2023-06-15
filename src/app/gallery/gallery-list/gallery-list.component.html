@@ -12,7 +12,7 @@
         <image-gallery *ngFor="let item of filteredData | slice: 
                 (paginator.pageIndex*paginator.pageSize):
                 ((paginator.pageIndex+1)*paginator.pageSize)" 
-            [url]="item.image" [title]="item.name">
+            [url]="item.image" [title]="item.name" (click)="showImage(item)">
         </image-gallery>
     </div>
     <mat-paginator #paginator [length]="filteredData.length"

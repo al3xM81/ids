@@ -29,7 +29,8 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; font-size: 
     margin: 3px;
 }
 
-.gallery-item {
+.gallery-item {    
+    border: 1px dotted #ccc;
     width: 200px;
     height: 250px;
     margin: 5px;
@@ -49,6 +50,11 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; font-size: 
 
 .card-container > * {
     display: flex;
+}
+
+.gallery-item:hover {
+    cursor: pointer;
+    border: 1px solid #777;
 }
 
 .card-title {
@@ -79,4 +85,30 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; font-size: 
 
 .mat-mdc-floating-label {
     font-size: 12px !important;
+}
+
+.modal-image {
+    width: 450px;
+    height: 500px;
+}
+
+.feature-list {
+    font-size: 12px;
+}
+
+.feature-list li {
+    line-height: 20px;
+    color: cadetblue;
+}
+
+li em {
+    color: aquamarine;
+}
+
+.features {
+    bottom: 0;
+    left: 0;
+    position: absolute;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.6);
 }

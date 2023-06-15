@@ -6,7 +6,8 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { NoopAnimationsModule } from '@angular/platform-browser/animations';
 import { ImageGalleryComponent } from './gallery/image-gallery/image-gallery.component';
-import { GalleryListComponent } from './gallery/gallery-list/gallery-list.component'; 
+import { GalleryListComponent } from './gallery/gallery-list/gallery-list.component';
+import { ModalImageComponent } from './modals/modal-image/modal-image.component';
 
 import { MatCardModule } from '@angular/material/card';
 import { MatFormFieldModule } from '@angular/material/form-field';
@@ -14,13 +15,15 @@ import { MatInputModule } from '@angular/material/input';
 import { MatButtonModule } from '@angular/material/button';
 import { MatIconModule } from '@angular/material/icon';
 import { FormsModule } from '@angular/forms';
-import { MatPaginatorModule } from '@angular/material/paginator'; 
+import { MatPaginatorModule } from '@angular/material/paginator';
+import { MatDialogModule } from '@angular/material/dialog'; 
 
 @NgModule({
   declarations: [
     AppComponent,
     ImageGalleryComponent,
-    GalleryListComponent
+    GalleryListComponent,
+    ModalImageComponent
   ],
   imports: [
     BrowserModule,
@@ -33,7 +36,8 @@ import { MatPaginatorModule } from '@angular/material/paginator';
     MatIconModule,
     HttpClientModule,
     FormsModule,
-    MatPaginatorModule
+    MatPaginatorModule,
+    MatDialogModule
   ],
   providers: [],
   bootstrap: [AppComponent]
