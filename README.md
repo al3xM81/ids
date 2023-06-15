@@ -2,7 +2,13 @@
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 15.2.6.
 
-The project shows an image gallery with Star Wars characters obtained from a public API and its saved into component variable. The gallery has a paginator feature to show only a limited number of images that can be customized by user or navigate through image pages.
+Project running can be watched here:
+
+http://ids.giorgana.mx
+
+The project shows an image gallery with Star Wars characters obtained from a public API and its saved into component variable. Each image can be display it in a modal dialog with more information about character (just 7 or 8 additional data).
+
+The gallery has a paginator feature to show only a limited number of images that can be customized by user or navigate through image pages.
 
 There is a search input, if user write some characters in it, the images will be filtered to show only image names that matches user input.
 
