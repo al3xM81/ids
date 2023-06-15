@@ -1,9 +1,10 @@
 <h1 mat-dialog-title>{{ this.imageTitle }}</h1>
-<img [src]="this.imageUrl" class="modal-image">
+<img [src]="this.imageUrl" class="modal-image" [alt]="this.imageUrl">
 <div>
     <div class="features">
         <ul class="feature-list">
             <li>gender: <em class="feature">{{ this.data.gender }}</em></li>
+            <li>Height: <em class="feature">{{ this.data.height }}</em></li>
             <li>homeworld: <em class="feature">{{ this.data.homeworld }}</em></li>
             <li>species: <em class="feature">{{ this.data.species }}</em></li>
             <span *ngIf="this.data.species!='droid'; else elseBlock">
@@ -16,6 +17,8 @@
                 <li>Model: <em class="feature">{{ this.data.model }}</em></li>
                 <li>Class: <em class="feature">{{ this.data.class }}</em></li>
                 <li>Manufacturer: <em class="feature">{{ this.data.manufacturer }}</em></li>
+                <li>Sensor color: <em class="feature">{{ this.data.sensorColor }}</em></li>
+                
             </ng-template>
         </ul>
     </div>

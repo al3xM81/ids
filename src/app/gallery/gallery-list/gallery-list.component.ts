@@ -28,6 +28,8 @@ export class GalleryListComponent {
 
   // Make request to Star Wars public API
   private requestImages() {
+    this.allData = [];
+    
     this.swData.getAllImages()
       .subscribe(data =>  {
         this.allData = data;
@@ -60,10 +62,22 @@ export class GalleryListComponent {
 
   // Adds new image data to allData array
   private addNewImage(data: any) {
-    this.allData.push(data);
+    data.id = this.getMaxId();
+
+    this.allData.unshift(data);
     this.filteredData = this.allData;
 
+    // If gallery is filtered apply it again
     this.searchTerm = this._searchTerm;
+  }
+
+  private getMaxId()  {
+    if (this.allData.length > 0)  {
+      let ids = this.allData.map(val => { return val.id });
+      return 1 + Math.max(...ids);
+    }
+
+    return 0;
   }
 
   // For filtering purposes

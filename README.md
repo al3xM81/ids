@@ -1,6 +1,20 @@
-# ImageGallery
+# Star Wars ImageGallery
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 15.2.6.
+
+The project shows an image gallery with Star Wars characters obtained from a public API and its saved into component variable. The gallery has a paginator feature to show only a limited number of images that can be customized by user or navigate through image pages.
+
+There is a search input, if user write some characters in it, the images will be filtered to show only image names that matches user input.
+
+There is also a button to add a new image to the component variable and its inserted at begining of array.
+
+## Install dependencies
+
+This project uses Angular Material UI version 15+. 
+
+Install it this way:
+
+`ng add @angular/material`
 
 ## Development server
 

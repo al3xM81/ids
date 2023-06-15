@@ -89,6 +89,10 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; font-size: 
     font-size: 12px !important;
 }
 
+.mat-mdc-option.mdc-list-item   {
+    font-size: 12px;
+}
+
 .modal-image {
     width: 450px;
     height: 500px;
