@@ -7,7 +7,7 @@ import { catchError, of } from 'rxjs';
 })
 export class SwDataService {
 
-  API_URL = 'https://akabab.github.io/starwars-api/api/all.jsons';
+  API_URL = 'https://akabab.github.io/starwars-api/api/all.json';
 
   constructor(private httpService: HttpClient) { }
 
