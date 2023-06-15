@@ -1,6 +1,6 @@
 <mat-card class="gallery-item">
     <mat-card-header>
-        <mat-card-title class="card-title">{{ imageTitle }}</mat-card-title>
+        <mat-card-title class="card-title">{{ this.images.name }}</mat-card-title>
     </mat-card-header>
-    <img mat-card-image [src]="this.imageUrl" [alt]="this.imageTitle" class="gallery-img">
+    <img mat-card-image [src]="this.images.url" [alt]="this.images.url" class="gallery-img">
 </mat-card>

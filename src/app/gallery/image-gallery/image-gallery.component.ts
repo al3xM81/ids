@@ -6,7 +6,6 @@ import { Component, Input } from '@angular/core';
   styleUrls: ['./image-gallery.component.css']
 })
 export class ImageGalleryComponent {
-  @Input('url') public imageUrl!: string;
-  @Input('title') public imageTitle!: string;
 
+  @Input('images') public images!: any;
 }

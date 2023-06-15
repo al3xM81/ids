@@ -29,12 +29,22 @@ export class GalleryListComponent {
   // Make request to Star Wars public API
   private requestImages() {
     this.allData = [];
-    
+
     this.swData.getAllImages()
       .subscribe(data =>  {
         this.allData = data;
         this.filteredData = this.allData;
       })
+  }
+
+  // Prepare object to pass as input into image component
+  public getImageData(item: any): any {
+    let obj = {
+      url: item.image,
+      name: item.name 
+    };
+
+    return obj;
   }
 
   // Opens modal to show image with more data
