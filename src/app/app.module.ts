@@ -8,6 +8,7 @@ import { NoopAnimationsModule } from '@angular/platform-browser/animations';
 import { ImageGalleryComponent } from './gallery/image-gallery/image-gallery.component';
 import { GalleryListComponent } from './gallery/gallery-list/gallery-list.component';
 import { ModalImageComponent } from './modals/modal-image/modal-image.component';
+import { AddNewComponent } from './modals/add-new/add-new.component';
 
 import { MatCardModule } from '@angular/material/card';
 import { MatFormFieldModule } from '@angular/material/form-field';
@@ -16,14 +17,16 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatIconModule } from '@angular/material/icon';
 import { FormsModule } from '@angular/forms';
 import { MatPaginatorModule } from '@angular/material/paginator';
-import { MatDialogModule } from '@angular/material/dialog'; 
+import { MatDialogModule } from '@angular/material/dialog';
+import { ReactiveFormsModule } from '@angular/forms'; 
 
 @NgModule({
   declarations: [
     AppComponent,
     ImageGalleryComponent,
     GalleryListComponent,
-    ModalImageComponent
+    ModalImageComponent,
+    AddNewComponent
   ],
   imports: [
     BrowserModule,
@@ -37,7 +40,8 @@ import { MatDialogModule } from '@angular/material/dialog';
     HttpClientModule,
     FormsModule,
     MatPaginatorModule,
-    MatDialogModule
+    MatDialogModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

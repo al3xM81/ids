@@ -4,6 +4,7 @@ import { MatDialog } from '@angular/material/dialog';
 import { SwDataService } from 'src/app/services/sw-data.service';
 
 import { ModalImageComponent } from 'src/app/modals/modal-image/modal-image.component';
+import { AddNewComponent } from 'src/app/modals/add-new/add-new.component';
 
 @Component({
   selector: 'app-gallery-list',
@@ -31,21 +32,35 @@ export class GalleryListComponent {
       .subscribe(data =>  {
         this.allData = data;
         this.filteredData = this.allData;
-        console.log(this.allData);
       })
   }
 
   showImage(event: any) {
-    console.log(event);
     this.dialog.open(ModalImageComponent, {
       data: event
     });
   }
 
   addImage()  {
-    this.dialog.open(ModalImageComponent, {
-
+    let newData: any = null;
+    const dialogRef = this.dialog.open(AddNewComponent, {
+      width: '360px',
+      height: '380px'
     });
+
+    dialogRef.afterClosed().subscribe((result) => {
+      if (result) {
+        newData = result;
+        this.addNewImage(newData);
+      }
+    })
+  }
+
+  private addNewImage(data: any) {
+    this.allData.push(data);
+    this.filteredData = this.allData;
+
+    this.searchTerm = this._searchTerm;
   }
 
   // For filtering purposes

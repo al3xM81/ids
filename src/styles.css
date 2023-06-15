@@ -68,7 +68,8 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; font-size: 
 
 .mat-mdc-text-field-wrapper {
     font-size: 12px;
-    height: 36px !important;
+    height: 36px !important;/* 
+    width: 350px !important; */
 }
 
 .mdc-text-field {
@@ -76,7 +77,7 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; font-size: 
 }
 
 .mat-mdc-form-field-infix {
-    width: 400px !important;
+    width: 280px !important;
 }
 
 .mdc-button  {

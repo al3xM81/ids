@@ -1,0 +1,33 @@
+<h2 mat-dialog-title>Add new image</h2>
+<mat-dialog-content>
+    <form [formGroup]="addForm">
+        <mat-form-field floatLabel="always">
+            <mat-label>Name:</mat-label>
+            <input matInput type="text" placeholder="Input a new name" required formControlName="name">
+            <mat-error *ngIf="addForm.get('name')!.invalid && (addForm.get('name')!.dirty || addForm.get('name')!.touched)">
+                <small *ngIf="addForm.get('name')!.hasError('required')">Name is required!</small>
+                <small *ngIf="addForm.get('name')!.errors?.['minlength']">Name is too short!</small>
+            </mat-error>
+        </mat-form-field>
+        <mat-form-field floatLabel="always">
+            <mat-label>Image URL:</mat-label>
+            <input matInput type="text" placeholder="Input image url" required formControlName="image">
+            <mat-error *ngIf="addForm.get('image')!.invalid && (addForm.get('image')!.dirty || addForm.get('image')!.touched)">
+                <small *ngIf="addForm.get('image')!.hasError('required')">Image url is required!</small>
+                <small *ngIf="addForm.get('image')!.errors?.['minlength']">Image url is too short!</small>
+            </mat-error>
+        </mat-form-field>
+        <mat-form-field floatLabel="always">
+            <mat-label>Species:</mat-label>
+            <input matInput type="text" placeholder="Input species" formControlName="species">
+        </mat-form-field>
+        <mat-form-field floatLabel="always">
+            <mat-label>Gender:</mat-label>
+            <input matInput type="text" placeholder="Input gender" formControlName="gender">
+        </mat-form-field>
+    </form>
+</mat-dialog-content>
+<div mat-dialog-actions>
+    <button mat-button (click)="saveAction()" [disabled]="!addForm.valid">Save</button>
+    <button mat-button (click)="cancelAction()">Cancel</button>
+  </div>
