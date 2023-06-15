@@ -35,12 +35,14 @@ export class GalleryListComponent {
       })
   }
 
+  // Opens modal to show image with more data
   showImage(event: any) {
     this.dialog.open(ModalImageComponent, {
       data: event
     });
   }
 
+  // Opens modal form to add new image
   addImage()  {
     let newData: any = null;
     const dialogRef = this.dialog.open(AddNewComponent, {
@@ -56,6 +58,7 @@ export class GalleryListComponent {
     })
   }
 
+  // Adds new image data to allData array
   private addNewImage(data: any) {
     this.allData.push(data);
     this.filteredData = this.allData;
@@ -79,9 +82,5 @@ export class GalleryListComponent {
 
   filter(val: string) {
     return this.allData.filter(x => x.name?.toLowerCase().indexOf(val.toLowerCase()) !== -1);
-  }
-
-  changePage(event: any)  {
-
   }
 }

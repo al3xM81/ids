@@ -63,6 +63,7 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; font-size: 
 }
 
 .paginator {
+    font-size: 12px !important;
     width: inherit;
 }
 

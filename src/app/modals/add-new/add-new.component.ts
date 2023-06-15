@@ -21,10 +21,12 @@ export class AddNewComponent {
     });
   }
 
+  // Close form
   cancelAction()  {
     this.dialogRef.close();
   }
 
+  // Save new data and return to parent component
   saveAction()  {
     this.newData = this.addForm.value;
     this.dialogRef.close(this.newData);
